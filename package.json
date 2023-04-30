@@ -1,10 +1,10 @@
 {
-  "name": "NFTMarketplace",
+  "name": "NFTMarketPlace",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "type": "module",
-  "homepage": "https://AlexandrMolkov.github.io/NFTMarketplace",
+  "homepage": "https://AlexandrMolkov.github.io/NFTMarketPlace",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
