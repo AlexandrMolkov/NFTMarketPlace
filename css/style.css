@@ -2470,7 +2470,7 @@ body {
   left: -60px;
   width: 172px;
   height: 172px;
-  background-image: url("/img/artwork_text.png");
+  background-image: url("../img/artwork_text.png");
   background-repeat: no-repeat;
   background-position: center;
   animation: rotate 10s infinite linear reverse;
