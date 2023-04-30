@@ -1,0 +1,97 @@
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;  
+}
+
+.main {
+    flex-grow: 1;
+}
+
+
+
+.footer {
+    padding: 92px 0 48px;
+
+    @media (max-width: 539px){
+        padding-top: 30px;
+    }
+    
+    @media (max-width: $laptop) and (orientation: landscape){
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+   
+    .container{
+        overflow: hidden;
+    }
+
+    &__content{
+        padding-bottom: 48px;
+        border-bottom: 1px solid #838382;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 90px;
+        flex-wrap: wrap;
+    }
+
+    &__info{
+        max-width: 272px;
+        padding-top: 22px;
+        padding-left: 15px;
+    }
+    &__info-text{
+        margin-bottom: 24px;
+    }
+
+    &__lists{
+        display: flex;
+        gap: 94px;
+        margin-right: 20px;
+        
+        @media (max-width: $tablet){
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: $mobileM){
+            gap: 48px;
+        }
+    }
+
+    &__list-title{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+        margin-bottom: 24px;
+    }
+
+    &__list-link{
+        text-transform: capitalize;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.copyright{
+    padding: 48px 0 92px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.privacy{
+    display: flex;
+    gap: 28px;
+   
+}

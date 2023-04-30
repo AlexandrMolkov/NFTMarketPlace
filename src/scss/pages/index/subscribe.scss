@@ -1,0 +1,107 @@
+.subscribe{
+
+    
+
+    &__content{
+
+        padding: 126px 0 92px;
+
+        position: relative;
+
+        @media (max-width: 539px){
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: $laptop) and (orientation: landscape){
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 48%;
+            height: 100%;
+            
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            .webp & {
+                background-image: url('../img/subscribe_background.webp');
+            }
+            .no-webp & {
+                background-image: url('../img/subscribe_background.png');
+            }
+
+            @media (max-width: $laptop){
+                width: 39%;
+            }
+            @media (max-width: $tablet){
+                width: 100%;
+                z-index: -1;
+                opacity: 0.2;
+                background-position: center top;
+            }
+        }
+    }
+
+    &__block{
+        padding: 52px 0 84px;
+
+        width: 40%;
+        margin-left: auto;
+
+        @media (max-width: 539px){
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: $laptop){
+            width: 56%;
+        }
+
+        @media (max-width: $tablet){
+            width: 100%;
+        }
+    }
+
+    &__title{
+        margin-bottom: 30px;
+        max-width: 450px;
+    }
+
+    &__info{
+        margin-bottom: 40px;
+    }
+
+    &__form{
+
+        padding: 4px 0 ;
+        border-radius: 8px;
+        background-color: $background;
+
+        display: flex;
+
+        @media (max-width: $mobileL){
+            flex-direction: column;
+        }
+
+        &-input{
+            width: 100%;
+            height: 100%;
+            padding: 17px 0 17px 24px;
+            background-color: $background;
+            color: $fontColor;
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+
+            &::placeholder{
+                color: #fffffdb8;
+            }
+        }
+    }
+}

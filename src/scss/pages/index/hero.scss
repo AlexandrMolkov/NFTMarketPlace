@@ -1,0 +1,189 @@
+.hero{
+    padding: 92px 0;
+
+    @media (max-width: $laptop){
+        padding-bottom: 30px;
+    }
+
+    @media (max-width: $laptop) and (orientation: landscape){
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    &__content{
+
+        $gap: 86px;
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: $gap;
+        
+        > * {
+            flex: 1 1 calc((100% / 2) - ($gap*2));
+        }
+        
+        @media (max-width: $tablet){
+        
+            > * {
+                flex: 1 1 calc((100% / 1) - ($gap*2));
+            }
+        }
+
+    }
+
+    &__item{
+
+        position: relative;
+
+        &_art-work{
+           
+            margin-right: 52px;
+
+            @media (max-width: $tablet){
+                max-width: 464px;
+                margin: 0 auto;
+            }
+
+
+
+        }
+
+    }
+    &__item-image-wrapper{
+        margin-left: auto;
+        max-width: 464px;
+        position: relative;
+
+        @keyframes rotate {
+            0%{
+                transform: rotate(1deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 48px);
+            left: -60px;
+            width: 172px;
+            height: 172px;
+            background-image: url('/img/artwork_text.png');
+            background-repeat: no-repeat;
+            background-position: center;
+
+            animation: rotate 10s infinite linear reverse;
+            
+            @media (max-width: 690px){
+                display: none;
+            }
+        }
+    }
+    &__item-image{
+        width: 100%;
+        height: auto;
+        
+    }
+
+    &__title{
+        padding-top: 15px;
+        font-family: 'Canela';
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 120%;
+
+        max-width: 399px;
+
+        margin-bottom: 32px;
+
+        span {
+            color: $accent;
+        }
+    }
+
+    &__text{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 30px;
+
+        margin-bottom: 72px;
+    }
+
+    &__stats{
+        display: flex;
+        justify-content: space-between;
+        max-width: 510px;
+        width: 100%;
+    }
+
+    &__stats-item:not(:last-child){
+
+        padding-right: 28px;
+
+    }
+
+    &__stats-item:not(:last-child){
+
+        border-right: 1px solid $accent;
+
+    }
+
+    &__stats-item-count{
+        font-family: 'Canela';
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 120%;
+
+        margin-bottom: 8px;
+        
+        span{
+            color: $accent;
+        }
+    }
+
+    &__bid{
+        width: 300px;
+        background: $background;
+        padding: 20px;
+        border-radius: 16px;
+
+        box-shadow: 0px -2px 0px 0px $accent;
+
+        position: absolute;
+        bottom: -88px;
+        right: -52px;
+
+        @media (max-width: 690px){
+            right: 0px;
+            max-width: 100%;
+        }
+
+        &-info{
+            margin-bottom: 20px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-info-item-text{
+            color: $accent;
+        }
+
+        &-info-item-value{
+            font-weight: 700;
+        }
+
+        &-info-btn {
+            width: 100%;
+        }
+    }
+}

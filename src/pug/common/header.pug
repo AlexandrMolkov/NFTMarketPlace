@@ -1,0 +1,27 @@
+header(class='header ' + headerClasses)#header
+    .blur
+    .container
+        .header__content(data-aos="fade-down")
+
+            .header__content-row
+                +burg('#mobile-menu','burger', 'Menu')(class="header-burg")
+
+                +nav(
+                    [
+                    {link:'#', content:'Marketplace'},
+                    {link:'#', content:'Artists'},
+                    {link:'#', content:'Community'},
+                    {link:'#', content:'Collections'}
+                    ], 'headNav', currentPage)(class="header__nav")
+
+                button.btn.hero__btn Contact
+
+    .mobile-menu.header__mobile-menu#mobile-menu
+        .mobile-menu__wrapper
+            +nav(
+                [
+                    {link:'catalog.html', content:'Marketplace'},
+                    {link:'contacts.html', content:'Artists'},
+                    {link:'promo.html', content:'Community'},
+                    {link:'catalog.html', content:'Collections'}
+                ], 'mobile_nav', currentPage)(class="nav_mobile root-nav")

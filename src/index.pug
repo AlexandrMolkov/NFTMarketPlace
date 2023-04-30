@@ -1,0 +1,19 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Marketplace'
+    -var headerClasses = ''
+    -var currentPage = 'Marketplace'
+
+block content
+    main.main
+        include pug/pages/index/hero
+        include pug/pages/index/art_of_week
+        include pug/pages/index/best
+        include pug/pages/index/artists
+        include pug/pages/index/subscribe
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

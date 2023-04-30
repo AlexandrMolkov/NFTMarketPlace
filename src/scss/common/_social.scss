@@ -1,0 +1,25 @@
+.social{
+    display: flex;
+    gap: 12px;
+
+    .social__link{
+        width: 24px;
+        height: 24px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .icon-fill{
+            opacity: fill .3s;
+        }
+
+        &:hover{
+            cursor: pointer;
+            
+            .icon-fill{
+                fill: $accent;
+            }
+        }
+    }
+}

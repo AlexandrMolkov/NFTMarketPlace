@@ -1,0 +1,87 @@
+.best{
+    
+    
+
+    &__content{
+        padding: 68px 0 92px;
+        display: flex;
+        justify-content: space-between;
+
+        position: relative;
+        
+        @media (max-width: 539px){
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: $laptop) and (orientation: landscape){
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 50%;
+            transform: translateY(50%);
+            right: 0;
+            width: 57%;
+            aspect-ratio: 74/56;
+            
+            background-repeat: no-repeat;
+            background-position: bottom left, top right;
+            background-size: 55.4%;
+
+            .webp & {
+                background-image: url('/img/nft1.webp'), url('/img/nft2.webp');
+            }
+            .no-webp & {
+                background-image: url('/img/nft1.png'), url('/img/nft2.png');
+            }
+
+            @media (max-width: $tablet){
+                top: 0;
+                bottom: auto;
+                transform: translateY(0%);
+                width: 100%;
+                z-index: -1;
+                opacity: 0.2;
+            }
+        }
+    }
+
+    &__block{
+        padding: 13% 0;
+        max-width: 426px;
+
+        @media (max-width: $tablet){
+            max-width: none;
+            width: 100%;
+        }
+
+        
+
+
+    }
+
+    &__title{
+        max-width: 300px;   
+        margin-bottom: 20px;
+    }
+
+    &__info{
+        margin-bottom: 40px;  
+        
+        @media (max-width: $laptop){
+            max-width: 300px;
+        }
+
+        @media (max-width: $tablet){
+            max-width: 520px;
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 36px;
+    }
+}
